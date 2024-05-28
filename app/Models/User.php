@@ -44,4 +44,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function timeLogs()
+    {
+        return $this->hasMany(Timelog::class);
+    }
 }
